@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: skill-forge-backend
+spec:
+  containers:
+  - name: skill-forge-backend
+    image: node:18-alpine
+    ports:
+    - containerPort: 3000
