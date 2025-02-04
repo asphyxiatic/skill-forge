@@ -7,4 +7,4 @@ spec:
   - name: skill-forge-backend
     image: node:18-alpine
     ports:
-    - containerPort: 3000
+    - containerPort: 8080
