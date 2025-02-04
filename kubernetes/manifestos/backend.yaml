@@ -1,13 +1,14 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: backend-production
+  name: backend-production-api
+  namespace: backend-production
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: backend-app
+        app: backend-app-prod
     spec:
       containers:
         - name: backend-production-api
@@ -17,5 +18,5 @@ spec:
             - containerPort: 3000
   selector:
     matchLabels:
-      app: backend-app
+      app: backend-app-prod
   
