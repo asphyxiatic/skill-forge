@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-prod-deployment
+  namespace: backend-production
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: backend-prod-deployment
+    spec:
+      containers:
+        - name: backend-prod-deployment
+          image: backend-prod
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 40001
+  selector:
+    matchLabels:
+      app: backend-prod-deployment
+  
